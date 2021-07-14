@@ -1,5 +1,20 @@
 h1 {
 	font-family: 'Alegreya' ;
+	text-align: center;
+}
+
+h2 {
+	font-family: 'Alegreya';
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+
+h4 {
+	color: red;
+	font-weight: bold;
 }
 
 body {
@@ -21,10 +36,14 @@ button {
 	color: #fff;
 }
 
-#generate {
-	background-color: #09f;
+.container {
+	margin: auto;
+	width: 50%;
 }
 
-#copy {
-	background-color: #0c6;
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 }
