@@ -1,0 +1,49 @@
+h1 {
+	font-family: 'Alegreya' ;
+	text-align: center;
+}
+
+h2 {
+	font-family: 'Alegreya';
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+
+h4 {
+	color: red;
+	font-weight: bold;
+}
+
+body {
+	font-family: 'Source Sans Pro' ;
+	/* width: 50%; */
+	/* margin-left: 25%; */
+	text-align: justify;
+	line-height: 1.7;
+	font-size: 18px;
+}
+
+input {
+	font-size: 18px;
+	text-align: center;
+}
+
+button {
+	font-size: 18px;
+	color: #fff;
+}
+
+.container {
+	margin: auto;
+	/* width: 50%; */
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
