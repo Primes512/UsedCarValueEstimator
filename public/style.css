@@ -19,8 +19,8 @@ h4 {
 
 body {
 	font-family: 'Source Sans Pro' ;
-	width: 50%;
-	margin-left: 25%;
+	/* width: 50%; */
+	/* margin-left: 25%; */
 	text-align: justify;
 	line-height: 1.7;
 	font-size: 18px;
@@ -38,7 +38,7 @@ button {
 
 .container {
 	margin: auto;
-	width: 50%;
+	/* width: 50%; */
 }
 
 img {
