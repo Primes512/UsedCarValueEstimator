@@ -15,12 +15,11 @@ h3 {
 h4 {
 	color: red;
 	font-weight: bold;
+	text-align: center;
 }
 
 body {
 	font-family: 'Source Sans Pro' ;
-	/* width: 50%; */
-	/* margin-left: 25%; */
 	text-align: justify;
 	line-height: 1.7;
 	font-size: 18px;
@@ -34,11 +33,21 @@ input {
 button {
 	font-size: 18px;
 	color: #fff;
+	margin: auto;
 }
 
 .container {
-	margin: auto;
-	width: 50%;}
+    display: block;
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
 
 img {
 	display: block;
@@ -49,5 +58,8 @@ img {
 
 footer {
 	margin: auto;
+	margin-top: 20px;
 	text-align: center;
+	background-color: rgb(255, 255, 100);
+	padding: 10px;
 }
