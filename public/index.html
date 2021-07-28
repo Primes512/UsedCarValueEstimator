@@ -11,14 +11,12 @@
     <script type="text/javascript" src="rates.js"></script>
     <script type="text/javascript" src="script.js"></script>
 
-
 </head>
 <html>
 
 <body>
 
     <div class="jumbotron">
-        <!-- <h1>Special Truck and Auto Salvage</h1> -->
         <img src="IMG_0459.jpg" alt="Special Truck and Auto Salvage">
         <h2>Vehicle Core Value</h2>
     </div>
@@ -122,18 +120,10 @@
 
     </div>
 
-    <!-- <script type="text/javascript" src="script.js"></script> -->
-
     <script type="text/javascript">
 
         $(document).ready(function() {
    
-            function emptyValue(){
-                coreValue = 0;
-
-                $("#core-value").empty();
-            }
-
             $("#submit-btn").on("click", function() {
 
                 var engine = ($("input[name='engine']:checked").val());
@@ -147,9 +137,6 @@
                 var alternator = ($("input[name='alternator']:checked").val());
                 var coreValue = 0;
 
-
-                // var aluminumRate = 0.26;
-                // var castIronRate = 0.15;
                 var engineCore = 0;
 
                 if (engine == "4CYL") {
@@ -183,9 +170,6 @@
                     }
                 }
 
-                // alert("engine core is: " + parseInt(engineCore));
-
-                // var transRate = 0.20;
                 var transCore = 0;
 
                 if (transmission == "FWD") {
@@ -202,57 +186,37 @@
                     transCore = transWeight * transRate;
                 }
 
-                // alert("Trans Core is: " + parseInt(transCore + engineCore));
-
-                // var wheelRate = 18;
                 var wheelCore = 0;
 
                 wheelCore = wheels * wheelRate;
 
-                // alert("Trans Core is: " + parseInt(transCore + engineCore + wheelCore));
-
                 var avgBatteryWeight = 50;
-                // var batteryRate = 0.28;
                 var batteryCore = 0;
 
                 batteryCore = battery * avgBatteryWeight * batteryRate;
 
-                // alert("Total Core is: " + parseInt(transCore + engineCore + wheelCore + batteryCore));
-
-                // var catRate = 120;
                 var catCore = 0;
 
                 catCore = cat * catRate;
 
                 var avgStarterWeight = 12;
-                // var starterRate = 0.55;
                 var starterCore = 0;
 
                 starterCore = starter * avgStarterWeight * starterRate;
 
-                // alert("Total Core is: " + parseFloat(transCore + engineCore + wheelCore + batteryCore + starterCore));
-
                 var avgACCompressorWeight = 25;
-                // var acCompressorRate = 0.38;
                 var acCompressorCore = 0;
 
                 acCompressorCore = acCompressor * avgACCompressorWeight * acCompressorRate;
                 
-                // alert("Total Core is: " + parseFloat(transCore + engineCore + wheelCore + batteryCore + starterCore + acCompressorCore));
-
                 var avgAlternatorWeight = 10;
-                // var alternatorRate = 0.65;
                 var alternatorCore = 0;
 
                 alternatorCore = alternator * avgAlternatorWeight * alternatorRate;
 
-                // alert("Total Core is: " + parseFloat(transCore + engineCore + wheelCore + batteryCore + starterCore + acCompressorCore + alternatorCore));
-
-                // var coreValue = parseInt(engineCore + transCore + wheelCore + batteryCore + starterCore + acCompressorCore + alternatorCore)
                 coreValue = parseFloat(transCore + engineCore + wheelCore + batteryCore + catCore + starterCore + acCompressorCore + alternatorCore).toFixed(2);
 
                 alert("This is your vehicle's core value: $" + coreValue);
-                // $("#core-value").text(coreValue);
             });
 
         });
