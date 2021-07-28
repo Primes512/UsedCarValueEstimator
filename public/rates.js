@@ -1,10 +1,10 @@
-var rates = {
-    aluminum: 0.26,
-    castIron: 0.15,
-    transmission: 0.20,
-    wheel: 18,
-    battery: 0.28,
-    starter: 0.55,
-    acCompressor: 0.38,
-    alternator: 0.65
-}
+
+var aluminumRate = 0.26;
+var castIronRate = 0.15;
+var transRate = 0.20;
+var wheelRate = 18;
+var batteryRate = 0.28;
+var catRate = 120;
+var starterRate = 0.55;
+var acCompressorRate = 0.38;
+var alternatorRate = 0.65;

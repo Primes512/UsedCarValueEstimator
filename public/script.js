@@ -29,6 +29,12 @@ $(function () {
   });
   
   $(function () {
+    $('.cat').click(function(e) {
+      $('.cat').not(this).prop('checked', false);
+    });
+  });
+
+  $(function () {
     $('.starter').click(function(e) {
       $('.starter').not(this).prop('checked', false);
     });

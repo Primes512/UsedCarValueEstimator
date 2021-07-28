@@ -4,8 +4,10 @@ h1 {
 }
 
 h2 {
-	font-family: 'Alegreya';
+	/* font-family: 'Alegreya'; */
+	color: red;
 	text-align: center;
+	font-weight: bold;
 }
 
 h3 {
@@ -62,4 +64,8 @@ footer {
 	text-align: center;
 	background-color: yellow;
 	padding: 10px;
+}
+
+.jumbotron {
+	background-color: yellow;
 }

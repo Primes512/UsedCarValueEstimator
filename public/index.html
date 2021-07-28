@@ -9,6 +9,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="rates.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
 
 </head>
 <html>
@@ -29,22 +31,20 @@
                 <div class="checkbox">
                     <input id="engine-1" type="checkbox" class="engine" name="engine" value="4CYL">
                     <label class="form-checkbox form-icon" for="engine-1">4CYL</label>
-                </div>
-                <div class="checkbox">
+                    <br>
                     <input id="engine-2" type="checkbox" class="engine" name="engine" value="V6">
                     <label class="form-checkbox form-icon" for="engine-2">V6</label>
-                </div>
-                <div class="checkbox">
+                    <br>
                     <input id="engine-3" type="checkbox" class="engine" name="engine" value="V8">
                     <label class="form-checkbox form-icon" for="engine-3">V8</label>
+                    <br>
                 </div>
 
                 <h4>Engine Type</h4>
                 <div class="checkbox">
                     <input id="engineType-1" type="checkbox" class="engineType" name="engineType" value="Aluminum">
                     <label class="form-checkbox form-icon" for="engineType-1">Aluminum</label>
-                </div>
-                <div class="checkbox">
+                    <br>
                     <input id="engineType-2" type="checkbox" class="engineType" name="engineType" value="Cast Iron">
                     <label class="form-checkbox form-icon" for="engineType-2">Cast Iron</label>
                 </div>
@@ -53,12 +53,10 @@
                 <div class="checkbox">
                     <input id="transmission-1" type="checkbox" class="trans" name="trans" value="FWD">
                     <label class="form-checkbox form-icon" for="transmission-1">FWD</label>
-                </div>
-                <div class="checkbox">
+                    <br>
                     <input id="transmission-2" type="checkbox" class="trans" name="trans" value="RWD">
                     <label class="form-checkbox form-icon" for="transmission-2">RWD</label>
-                </div>
-                <div class="checkbox">
+                    <br>
                     <input id="transmission-3" type="checkbox" class="trans" name="trans" value="AWD">
                     <label class="form-checkbox form-icon" for="transmission-3">AWD/4X4</label>
                 </div>
@@ -67,16 +65,13 @@
                 <div class="checkbox">
                     <input id="wheels-1" type="checkbox" class="wheels" name="wheels" value="1">
                     <label class="form-checkbox form-icon" for="wheels-1">1</label>
-                </div>
-                <div class="checkbox">
+                    <br>
                     <input id="wheels-2" type="checkbox" class="wheels" name="wheels" value="2">
                     <label class="form-checkbox form-icon" for="wheels-2">2</label>
-                </div>
-                <div class="checkbox">
+                    <br>
                     <input id="wheels-3" type="checkbox" class="wheels" name="wheels" value="3">
                     <label class="form-checkbox form-icon" for="wheels-3">3</label>
-                </div>
-                <div class="checkbox">
+                    <br>
                     <input id="wheels-4" type="checkbox" class="wheels" name="wheels" value="4">
                     <label class="form-checkbox form-icon" for="wheels-4">4</label>
                 </div>
@@ -85,6 +80,18 @@
                 <div class="checkbox">
                     <input id="battery-1" type="checkbox" class="battery" name="battery" value="1">
                     <label class="form-checkbox form-icon" for="battery-1">1</label>
+                    <br>
+                    <input id="battery-2" type="checkbox" class="battery" name="battery" value="2">
+                    <label class="form-checkbox form-icon" for="battery-2">2</label>
+                </div>
+
+                <h4>Catalyc Converter</h4>
+                <div class="checkbox">
+                    <input id="cat-1" type="checkbox" class="cat" name="cat" value="1">
+                    <label class="form-checkbox form-icon" for="cat-1">1</label>
+                    <br>
+                    <input id="cat-2" type="checkbox" class="cat" name="cat" value="2">
+                    <label class="form-checkbox form-icon" for="cat-2">2</label>
                 </div>
 
                 <h4>Starter</h4>
@@ -115,8 +122,7 @@
 
     </div>
 
-    <script type="text/javascript" src="script.js"></script>
-    <!-- <script src="VCV.js"></script> -->
+    <!-- <script type="text/javascript" src="script.js"></script> -->
 
     <script type="text/javascript">
 
@@ -135,14 +141,15 @@
                 var transmission = ($("input[name='trans']:checked").val());
                 var wheels = ($("input[name='wheels']:checked").val());
                 var battery = ($("input[name='battery']:checked").val());
+                var cat = ($("input[name='cat']:checked").val());
                 var starter = ($("input[name='starter']:checked").val());
                 var acCompressor = ($("input[name='acComp']:checked").val());
                 var alternator = ($("input[name='alternator']:checked").val());
                 var coreValue = 0;
 
 
-                var aluminumRate = 0.26;
-                var castIronRate = 0.15;
+                // var aluminumRate = 0.26;
+                // var castIronRate = 0.15;
                 var engineCore = 0;
 
                 if (engine == "4CYL") {
@@ -178,7 +185,7 @@
 
                 // alert("engine core is: " + parseInt(engineCore));
 
-                var transRate = 0.20;
+                // var transRate = 0.20;
                 var transCore = 0;
 
                 if (transmission == "FWD") {
@@ -197,7 +204,7 @@
 
                 // alert("Trans Core is: " + parseInt(transCore + engineCore));
 
-                var wheelRate = 18;
+                // var wheelRate = 18;
                 var wheelCore = 0;
 
                 wheelCore = wheels * wheelRate;
@@ -205,15 +212,20 @@
                 // alert("Trans Core is: " + parseInt(transCore + engineCore + wheelCore));
 
                 var avgBatteryWeight = 50;
-                var batteryRate = 0.28;
+                // var batteryRate = 0.28;
                 var batteryCore = 0;
 
                 batteryCore = battery * avgBatteryWeight * batteryRate;
 
                 // alert("Total Core is: " + parseInt(transCore + engineCore + wheelCore + batteryCore));
 
+                // var catRate = 120;
+                var catCore = 0;
+
+                catCore = cat * catRate;
+
                 var avgStarterWeight = 12;
-                var starterRate = 0.55;
+                // var starterRate = 0.55;
                 var starterCore = 0;
 
                 starterCore = starter * avgStarterWeight * starterRate;
@@ -221,7 +233,7 @@
                 // alert("Total Core is: " + parseFloat(transCore + engineCore + wheelCore + batteryCore + starterCore));
 
                 var avgACCompressorWeight = 25;
-                var acCompressorRate = 0.38;
+                // var acCompressorRate = 0.38;
                 var acCompressorCore = 0;
 
                 acCompressorCore = acCompressor * avgACCompressorWeight * acCompressorRate;
@@ -229,7 +241,7 @@
                 // alert("Total Core is: " + parseFloat(transCore + engineCore + wheelCore + batteryCore + starterCore + acCompressorCore));
 
                 var avgAlternatorWeight = 10;
-                var alternatorRate = 0.65;
+                // var alternatorRate = 0.65;
                 var alternatorCore = 0;
 
                 alternatorCore = alternator * avgAlternatorWeight * alternatorRate;
@@ -237,7 +249,7 @@
                 // alert("Total Core is: " + parseFloat(transCore + engineCore + wheelCore + batteryCore + starterCore + acCompressorCore + alternatorCore));
 
                 // var coreValue = parseInt(engineCore + transCore + wheelCore + batteryCore + starterCore + acCompressorCore + alternatorCore)
-                coreValue = parseFloat(transCore + engineCore + wheelCore + batteryCore + starterCore + acCompressorCore + alternatorCore).toFixed(2);
+                coreValue = parseFloat(transCore + engineCore + wheelCore + batteryCore + catCore + starterCore + acCompressorCore + alternatorCore).toFixed(2);
 
                 alert("This is your vehicle's core value: $" + coreValue);
                 // $("#core-value").text(coreValue);
